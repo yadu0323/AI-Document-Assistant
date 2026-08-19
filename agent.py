@@ -51,18 +51,24 @@ Return ONLY the tool name.
 User Query:
 {user_query}
 """
+    try:
+        response = requests.post(
+            OLLAMA_URL,
+            json={
+                "model": "qwen2.5-coder:7b",
+                "prompt": prompt,
+                "stream": False
+            },
+            timeout=60
+        )
+        print(response.status_code)
+        print(response.text)
+        return response.json()["response"].strip()
 
-    response = requests.post(
-        OLLAMA_URL,
-        json={
-            "model": "qwen2.5-coder:7b",
-            "prompt": prompt,
-            "stream": False
-        }
-    )
-    print(response.status_code)
-    print(response.text)
-    return response.json()["response"].strip()
+    except Exception as e:
+        print("OLLAMA ERROR:", e)
+        raise
+
 
 
 def execute_tool(tool_name, query):

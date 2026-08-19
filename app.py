@@ -68,20 +68,6 @@ query = st.chat_input(
 
 if query:
 
-    tool = decide_tool(query)
-
-    tool_result = execute_tool(
-        tool,
-        query
-    )
-
-    answer = generate_final_answer(
-        query,
-        tool_result
-    )
-
-    # Save User Message
-
     st.session_state.messages.append(
         {
             "role": "user",
@@ -89,7 +75,22 @@ if query:
         }
     )
 
-    # Save Assistant Message
+    with st.chat_message("user"):
+        st.write(query)
+
+    with st.spinner("Thinking..."):
+
+        tool = decide_tool(query)
+
+        tool_result = execute_tool(
+            tool,
+            query
+        )
+
+        answer = generate_final_answer(
+            query,
+            tool_result
+        )
 
     st.session_state.messages.append(
         {
