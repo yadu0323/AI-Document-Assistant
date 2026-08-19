@@ -17,6 +17,7 @@ ENV/
 # Environment Variables
 # =========================
 .env
+.env.*
 
 # =========================
 # VS Code
@@ -29,23 +30,30 @@ ENV/
 .streamlit/
 
 # =========================
-# FAISS / RAG Files
+# FAISS / Vector Database
 # =========================
 *.index
+*.faiss
 *.pkl
 
 # =========================
-# Uploaded PDFs
+# Uploaded Documents
 # =========================
 datas/uploads/
 
 # =========================
-# Sample Files
+# Generated Data
+# =========================
+datas/chunks.pkl
+datas/faiss.index
+
+# =========================
+# Sample/Test Files
 # =========================
 sample.pdf
 
 # =========================
-# Test Scripts
+# Test Scripts Folder
 # =========================
 scripts/
 
@@ -55,7 +63,7 @@ scripts/
 *.log
 
 # =========================
-# Cache
+# Python Cache / Coverage
 # =========================
 .pytest_cache/
 .mypy_cache/
@@ -75,3 +83,14 @@ dist/
 # =========================
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Ollama / Local Models
+# =========================
+models/
