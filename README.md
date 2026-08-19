@@ -1,4 +1,4 @@
-# AI Document Assistant
+\# AI Document Assistant
 
 An AI-powered Document Assistant built using **RAG (Retrieval-Augmented Generation)**, **FAISS**, **MCP (Model Context Protocol)**, **Ollama**, and **Streamlit**.
 
@@ -33,6 +33,22 @@ Upload PDF documents, ask questions about their content, generate summaries, ext
 ### Streamlit Interface
 - Simple and user-friendly chat interface.
 - Upload PDFs and interact with documents in real time.
+
+---
+
+## Screenshots
+
+### Streamlit Interface
+
+![Streamlit UI](screenshots/streamlit-ui.png)
+
+### MCP Server Connection
+
+![MCP Server](screenshots/mcp-server.png)
+
+### MCP Tools
+
+![MCP Tools](screenshots/mcp-tools.png)
 
 ---
 
@@ -97,6 +113,11 @@ Answer Generation
 AI-Document-Assistant/
 │
 ├── datas/
+│
+├── screenshots/
+│   ├── streamlit-ui.png
+│   ├── mcp-server.png
+│   └── mcp-tools.png
 │
 ├── src/
 │   ├── pdf_loader.py
@@ -233,26 +254,19 @@ The assistant:
 
 ## MCP Tools
 
-Available MCP tools:
-
 ### document_search
-
 Search relevant document chunks.
 
 ### document_summary
-
 Generate document summaries.
 
 ### document_keywords
-
 Extract important keywords.
 
 ### ask_document
-
 Question answering over uploaded documents.
 
 ### wiki_search
-
 General knowledge lookup using Wikipedia.
 
 ---
@@ -263,18 +277,15 @@ General knowledge lookup using Wikipedia.
 - Chat history memory
 - Conversation context
 - Source citations
-- Hybrid search (BM25 + Vector Search)
-- Persistent vector database
+- Hybrid Search (BM25 + Vector Search)
+- Persistent Vector Database
 - Docker deployment
 - Authentication and user management
 
 ---
 
-
----
-
 ## Author
 
-Yadu
+**Yadu**
 
 ---
